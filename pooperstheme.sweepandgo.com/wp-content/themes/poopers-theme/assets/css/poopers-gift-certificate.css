@@ -1,0 +1,145 @@
+.sng_page-template-sng-gift-certificate-template header.page-header {
+    width: 100%;
+    padding: 30px 150px;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.sng_page-template-sng-gift-certificate-template header.page-header {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sng_page-template-sng-gift-certificate-template header.page-header h1.entry-title {
+    color: #fff !important;
+    margin: 5px 0px 0px 0px;
+    font-weight: 400;
+    font-size: 81px;
+    text-align: center;
+}
+
+.sng-form-group label,
+.sng-dog-fields-wrapper label {
+    padding-bottom: 5px;
+}
+
+.sng_page-template-sng-gift-certificate-template #content.type-sng-page .sng-page-content {
+    display: flex;
+    gap: 56px;
+    width: 100%;
+    padding: 34px 150px 73px;
+    align-items: flex-start;
+}
+
+.sng_page-template-sng-gift-certificate-template #content.type-sng-page .sng-page-content>div {
+    width: 50%;
+}
+
+.sng_page-template-sng-gift-certificate-template #content.type-sng-page .sng-page-content>div img {
+    width: 100%;
+}
+
+.sng_page-template-sng-gift-certificate-template #content.type-sng-page .sng-page-content>div:first-child p {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    color: #28004a;
+}
+
+#sng_gift_certificate_form {
+    max-width: 740px;
+    margin: 0px !important;
+    background: #f6f2fd;
+    border-radius: 0px;
+    padding: 47px 51px 30px;
+    width: 100%;
+}
+
+.sng-gift-certificate-promo {
+    flex-direction: column;
+    border-radius: 0px;
+    background: #fff4f2;
+    padding: 36px 30px 30px;
+    margin-bottom: 40px;
+}
+
+.sng-gift-certificate-promo h2 {
+    font-size: 21px;
+    margin: 0px;
+    line-height: 28px;
+}
+
+.sng-gift-certificate-promo p {
+    font-size: 16px;
+    margin: 0px;
+    line-height: 34px;
+}
+
+.sng-amount-total {
+    background: #f2f9f6;
+    border-radius: 0px;
+    padding: 36px 30px 30px;
+    margin-bottom: 20px;
+}
+
+.gift-bonus-subtitle {
+    border: none;
+    text-align: left;
+    padding: 0px;
+    background: transparent;
+    font-size: 21px;
+    color: #202020;
+    margin-bottom: 13px;
+}
+
+.gift-amount,
+.gift-bonus,
+.gift-total {
+    padding: 0rem;
+    border-bottom: none;
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.gift-total {
+    margin-bottom: 0px;
+}
+
+.gift-total .value {
+    font-weight: bold;
+}
+
+#sng_send_to_group {
+    margin-bottom: 0px;
+}
+
+#sng_send_to_group>* {
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .sng_page-template-sng-gift-certificate-template #content.type-sng-page .sng-page-content>div {
+        width: 100%;
+    }
+    .sng_page-template-sng-gift-certificate-template #content.type-sng-page .sng-page-content {
+        padding: 40px 10px;
+        gap: 20px;
+        flex-direction: column;
+    }
+    #sng_gift_certificate_form {
+        padding: 30px 20px;
+    }
+    .sng_page-template-sng-gift-certificate-template header.page-header {
+        padding: 30px 10px;
+        min-height: auto;
+    }
+    .sng_page-template-sng-gift-certificate-template header.page-header h1.entry-title {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}

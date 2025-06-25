@@ -1,0 +1,14 @@
+/*!
+Theme Name: PoopersTheme Child Theme
+Theme URI: https://pooperstheme.sweepandgo.com/
+Description: Description: PoopersTheme Child Theme 
+Author: Sweep&Go
+Author URI: https://www.sweepandgo.com
+Template: poopers-theme
+Version: 1.0.0
+Text Domain:  poopers-theme-child
+*/
+
+#one_time_payment_submit {
+    pointer-events: none !important;
+}

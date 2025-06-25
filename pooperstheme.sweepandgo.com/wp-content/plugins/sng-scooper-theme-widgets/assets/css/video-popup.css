@@ -1,0 +1,56 @@
+/* Video Popup */
+
+#sng-video-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+#sng-video-popup-container {
+    width: 85vw;
+    max-height: 85vh;
+    height: 100%;
+}
+
+#sng-video-popup-container iframe {
+    height: 100%;
+    width: 100%;
+    max-height: 90vh;
+    aspect-ratio: 1.77777;
+}
+
+.sng-video-popup-close {
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sng-video-popup .sng-video-popup-trigger {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.sng-video-popup .sng-video-popup-trigger::before {
+    font-size: 22px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    content: '\f144';
+    margin-right: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+    #sng-video-popup-container.mobile-video-container {
+        max-height: 100vh;
+    }
+    #sng-video-popup-container.mobile-video-container iframe {
+        max-height: 100vh;
+        aspect-ratio: 0.6;
+    }
+}

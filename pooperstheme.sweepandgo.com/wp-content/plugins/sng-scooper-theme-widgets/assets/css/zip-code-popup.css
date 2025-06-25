@@ -1,0 +1,107 @@
+/* POP UP */
+
+button {
+    cursor: pointer;
+}
+
+#zipCheckerWrapper {
+    border: 3px solid white;
+    padding: 60px 50px;
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 9999;
+    background-color: white;
+    width: 600px;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: unset;
+}
+
+#zipCheckerWrapper.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#zipCheckerWrapper #zipCodeWrapper {
+    text-align: center;
+}
+
+#zipCheckerWrapper #zipCodeWrapper {
+    margin-top: 0px;
+}
+
+#zipCheckerWrapper #zipCodeWrapper .sng-zip-code {
+    display: flex;
+}
+
+#zipCheckerWrapper #zipCodeWrapper .sng-zip-code button {
+    margin-left: -50px;
+}
+
+.popUpZipTitle {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .75);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+    z-index: 9998;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#buttonSignUpNewPop {
+    padding: 25px 40px;
+    background-color: rgb(211, 7, 0);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#buttonSignUpNewPop:hover {
+    opacity: 0.87;
+}
+
+@media only screen and (max-width: 768px) {
+    #zipCheckerWrapper {
+        padding: 30px 25px;
+    }
+    #zipCheckerWrapper .wpb_wrapper {
+        width: inherit;
+    }
+    #zipCheckerWrapper #zipCodeWrapper .sng-zip-code {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #zipCheckerWrapper #zipCodeWrapper .sng-zip-code button {
+        margin-left: 0px;
+        width: 100%;
+    }
+    #zipCheckerWrapper #zipCodeWrapper .sng-zip-code input {
+        width: 100%;
+    }
+}

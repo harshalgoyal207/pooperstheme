@@ -1,0 +1,13 @@
+.sng-pattern-image-container {
+    position: relative;
+}
+
+.sng-pattern-image-container .sng-image {
+    z-index: 1;
+    position: relative;
+}
+
+.sng-pattern-image-container .sng-pattern-image {
+    z-index: 0;
+    position: absolute;
+}

@@ -1,0 +1,29 @@
+/* Icons Box */
+
+.sng-icons-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.sng-icons-box svg {
+    height: auto;
+}
+
+.sng-icons-box h3,
+.sng-icons-box p {
+    margin: 0px;
+}
+
+.sng-icons-box h3 {
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .sng-icons-box {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .sng-icons-box .sng-icons-box-content {
+        width: fit-content;
+    }
+}

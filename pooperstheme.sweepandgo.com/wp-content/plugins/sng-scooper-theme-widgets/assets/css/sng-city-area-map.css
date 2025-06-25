@@ -1,0 +1,63 @@
+/* City Area Map */
+
+.sng-city-area-map .gmap-wrapper .scrolloff {
+    pointer-events: none;
+}
+
+.sng-city-area-map ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px 20px;
+    padding: 0;
+    list-style: none;
+    justify-content: flex-start;
+}
+
+.sng-city-area-map ul li {
+    flex: 1;
+    min-width: calc(20% - 20px);
+    max-width: calc(20% - 20px);
+    font-size: 15px;
+}
+
+.sng-city-area-map ul li a {
+    text-decoration: underline;
+}
+
+.sng-city-area-map ul li sup {
+    top: -5px;
+    margin-left: 10px;
+    font-size: 11px;
+    border-radius: 5px;
+    padding: 2px 8px;
+    color: #fff;
+    font-style: italic;
+}
+
+.sng-city-area-map ul li:nth-of-type(n+21) {
+    display: none;
+}
+
+.sng-city-area-map button.show-more {
+    font-size: 15px;
+    background: none;
+    color: #00835B;
+    text-transform: capitalize;
+    padding: 0px;
+    font-weight: 400;
+    text-decoration: underline;
+    margin: 30px auto 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    .sng-city-area-map ul {
+        gap: 6px 20px;
+    }
+    .sng-city-area-map ul li {
+        min-width: calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+    .sng-city-area-map button.show-more {
+        margin: 20px auto 0px;
+    }
+}

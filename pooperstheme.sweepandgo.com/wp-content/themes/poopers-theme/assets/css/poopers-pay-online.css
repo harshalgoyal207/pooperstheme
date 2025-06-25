@@ -1,0 +1,103 @@
+.sng_page-template-sng-onetime-payments-template #content.type-sng-page .sng-page-content {
+    display: flex;
+    gap: 56px;
+    width: 100%;
+    padding: 34px 150px 73px;
+    align-items: flex-start;
+}
+
+.sng_page-template-sng-onetime-payments-template #content.type-sng-page .sng-page-content>div {
+    width: 50%;
+}
+
+.sng_page-template-sng-onetime-payments-template #content.type-sng-page .sng-page-content>div img {
+    width: 100%;
+}
+
+.sng_page-template-sng-onetime-payments-template #content.type-sng-page .sng-page-content>div:first-child p {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    color: #28004a;
+}
+
+#sng_onetime_payments_form {
+    max-width: 740px;
+    margin: 0px !important;
+    background: #f6f2fd;
+    border-radius: 0px;
+    padding: 47px 51px 30px;
+    width: 100%;
+}
+
+.sng_pay_different_invoice {
+    font-size: 16px;
+    line-height: 28px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+form#sng_onetime_payments_form input[type="number"] {
+    max-width: 100%;
+}
+
+.sng-invoice-thank-you {
+    max-width: 740px;
+    margin: 0px !important;
+    background: #f6f2fd;
+    border-radius: 0px;
+    padding: 47px 51px 30px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    color: #28004a;
+}
+
+.sng_page-template-sng-onetime-payments-template header.page-header {
+    width: 100%;
+    padding: 30px 150px;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.sng_page-template-sng-onetime-payments-template header.page-header {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sng_page-template-sng-onetime-payments-template header.page-header h1.entry-title {
+    color: #fff !important;
+    margin: 5px 0px 0px 0px;
+    font-weight: 400;
+    font-size: 81px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .sng_page-template-sng-onetime-payments-template #content.type-sng-page .sng-page-content>div {
+        width: 100%;
+    }
+    .sng_page-template-sng-onetime-payments-template #content.type-sng-page .sng-page-content {
+        padding: 40px 10px;
+        gap: 20px;
+        flex-direction: column;
+    }
+    #sng_onetime_payments_form,
+    .sng-invoice-thank-you {
+        padding: 30px 20px;
+    }
+    .sng_page-template-sng-onetime-payments-template header.page-header {
+        padding: 30px 10px;
+        min-height: auto;
+    }
+    .sng_page-template-sng-onetime-payments-template header.page-header h1.entry-title {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}

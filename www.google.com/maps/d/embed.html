@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebSite">
+
+<head>
+    <script nonce="xtzjNNvyotmx6iaVECRHnQ">
+        window['ppConfig'] = {
+            productName: '06194a8f37177242d55a18e38c5a91c6',
+            deleteIsEnforced: false,
+            sealIsEnforced: false,
+            heartbeatRate: 0.5,
+            periodicReportingRateMillis: 60000.0,
+            disableAllReporting: false
+        };
+        (function() {
+            'use strict';
+
+            function k(a) {
+                var b = 0;
+                return function() {
+                    return b < a.length ? {
+                        done: !1,
+                        value: a[b++]
+                    } : {
+                        done: !0
+                    }
+                }
+            }
+            var l = typeof Object.defineProperties == "function" ? Object.defineProperty : function(a, b, c) {
+                if (a == Array.prototype || a == Object.prototype) return a;
+                a[b] = c.value;
+                return a
+            };
+
+            function m(a) {
+                a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global];
+                for (var b = 0; b < a.length; ++b) {
+                    var c = a[b];
+                    if (c && c.Math == Math) return c
+                }
+                throw Error("Cannot find global object");
+            }
+            var n = m(this);
+
+            function p(a, b) {
+                if (b) a: {
+                    var c = n;a = a.split(".");
+                    for (var d = 0; d < a.length - 1; d++) {
+                        var e = a[d];
+                        if (!(e in c)) break a;
+                        c = c[e]
+                    }
+                    a = a[a.length - 1];d = c[a];b = b(d);b != d && b != null && l(c, a, {
+                        configurable: !0,
+                        writable: !0,
+                        value: b
+                    })
+                }
+            }
+
+            function q(a) {
+                var b = typeof Symbol != "undefined" && Symbol.iterator && a[Symbol.iterator];
+                if (b) return b.call(a);
+                if (typeof a.length == "number") return {
+                    next: k(a)
+                };
+                throw Error(String(a) + " is not an iterable or ArrayLike");
+            }
+            p("Object.is", function(a) {
+                return a ? a : function(b, c) {
+                    return b === c ? b !== 0 || 1 / b === 1 / c : b !== b && c !== c
+                }
+            });
+            p("Array.prototype.includes", function(a) {
+                return a ? a : function(b, c) {
+                    var d = this;
+                    d instanceof String && (d = String(d));
+                    var e = d.length;
+                    c = c || 0;
+                    for (c < 0 && (c = Math.max(c + e, 0)); c < e; c++) {
+                        var f = d[c];
+                        if (f === b || Object.is(f, b)) return !0
+                    }
+                    return !1
+                }
+            });
+            p("String.prototype.includes", function(a) {
+                return a ? a : function(b, c) {
+                    if (this == null) throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");
+                    if (b instanceof RegExp) throw new TypeError("First argument to String.prototype.includes must not be a regular expression");
+                    return this.indexOf(b, c || 0) !== -1
+                }
+            });
+
+            function r(a, b, c) {
+                a("https://csp.withgoogle.com/csp/proto/" + encodeURIComponent(b), JSON.stringify(c))
+            }
+
+            function t() {
+                var a;
+                if ((a = window.ppConfig) == null ? 0 : a.disableAllReporting) return function() {};
+                var b, c, d, e;
+                return (e = (b = window) == null ? void 0 : (c = b.navigator) == null ? void 0 : (d = c.sendBeacon) == null ? void 0 : d.bind(navigator)) != null ? e : u
+            }
+
+            function u(a, b) {
+                var c = new XMLHttpRequest;
+                c.open("POST", a);
+                c.send(b)
+            }
+
+            function v() {
+                var a = (w = Object.prototype) == null ? void 0 : w.__lookupGetter__("__proto__"),
+                    b = x,
+                    c = y;
+                return function() {
+                    var d = a.call(this),
+                        e, f, g, h;
+                    r(c, b, {
+                        type: "ACCESS_GET",
+                        origin: (f = window.location.origin) != null ? f : "unknown",
+                        report: {
+                            className: (g = d == null ? void 0 : (e = d.constructor) == null ? void 0 : e.name) != null ? g : "unknown",
+                            stackTrace: (h = Error().stack) != null ? h : "unknown"
+                        }
+                    });
+                    return d
+                }
+            }
+
+            function z() {
+                var a = (A = Object.prototype) == null ? void 0 : A.__lookupSetter__("__proto__"),
+                    b = x,
+                    c = y;
+                return function(d) {
+                    d = a.call(this, d);
+                    var e, f, g, h;
+                    r(c, b, {
+                        type: "ACCESS_SET",
+                        origin: (f = window.location.origin) != null ? f : "unknown",
+                        report: {
+                            className: (g = d == null ? void 0 : (e = d.constructor) == null ? void 0 : e.name) != null ? g : "unknown",
+                            stackTrace: (h = Error().stack) != null ? h : "unknown"
+                        }
+                    });
+                    return d
+                }
+            }
+
+            function B(a, b) {
+                C(a.productName, b);
+                setInterval(function() {
+                    C(a.productName, b)
+                }, a.periodicReportingRateMillis)
+            }
+            var D = "constructor __defineGetter__ __defineSetter__ hasOwnProperty __lookupGetter__ __lookupSetter__ isPrototypeOf propertyIsEnumerable toString valueOf __proto__ toLocaleString x_ngfn_x".split(" "),
+                E = D.concat,
+                F = navigator.userAgent.match(/Firefox\/([0-9]+)\./),
+                G = (!F || F.length < 2 ? 0 : Number(F[1]) < 75) ? ["toSource"] : [],
+                H;
+            if (G instanceof Array) H = G;
+            else {
+                for (var I = q(G), J, K = []; !(J = I.next()).done;) K.push(J.value);
+                H = K
+            }
+            var L = E.call(D, H),
+                M = [];
+
+            function C(a, b) {
+                for (var c = [], d = q(Object.getOwnPropertyNames(Object.prototype)), e = d.next(); !e.done; e = d.next()) e = e.value, L.includes(e) || M.includes(e) || c.push(e);
+                e = Object.prototype;
+                d = [];
+                for (var f = 0; f < c.length; f++) {
+                    var g = c[f];
+                    d[f] = {
+                        name: g,
+                        descriptor: Object.getOwnPropertyDescriptor(Object.prototype, g),
+                        type: typeof e[g]
+                    }
+                }
+                if (d.length !== 0) {
+                    c = q(d);
+                    for (e = c.next(); !e.done; e = c.next()) M.push(e.value.name);
+                    var h;
+                    r(b, a, {
+                        type: "SEAL",
+                        origin: (h = window.location.origin) != null ? h : "unknown",
+                        report: {
+                            blockers: d
+                        }
+                    })
+                }
+            };
+            var N = Math.random(),
+                O = t(),
+                P = window.ppConfig;
+            P && (P.disableAllReporting || P.deleteIsEnforced && P.sealIsEnforced || N < P.heartbeatRate && r(O, P.productName, {
+                origin: window.location.origin,
+                type: "HEARTBEAT"
+            }));
+            var y = t(),
+                Q = window.ppConfig;
+            if (Q)
+                if (Q.deleteIsEnforced) delete Object.prototype.__proto__;
+                else if (!Q.disableAllReporting) {
+                var x = Q.productName;
+                try {
+                    var w, A;
+                    Object.defineProperty(Object.prototype, "__proto__", {
+                        enumerable: !1,
+                        get: v(),
+                        set: z()
+                    })
+                } catch (a) {}
+            }
+            (function() {
+                var a = t(),
+                    b = window.ppConfig;
+                b && (b.sealIsEnforced ? Object.seal(Object.prototype) : b.disableAllReporting || (document.readyState !== "loading" ? B(b, a) : document.addEventListener("DOMContentLoaded", function() {
+                    B(b, a)
+                })))
+            })();
+        }).call(this);
+    </script>
+    <title itemprop="name">Magnificent Scoopers Service Area – Google My Maps</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,width=device-width" />
+    <meta name="description" itemprop="description" content="this is a demo!" />
+    <meta itemprop="url" content="https://www.google.com/maps/d/viewer?mid=1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp" />
+    <meta itemprop="image" content="https://www.google.com/maps/d/thumbnail?mid=1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Magnificent Scoopers Service Area – Google My Maps" />
+    <meta property="og:description" content="this is a demo!" />
+    <meta property="og:url" content="https://www.google.com/maps/d/viewer?mid=1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp" />
+    <meta property="og:image" content="https://www.google.com/maps/d/thumbnail?mid=1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp" />
+    <meta property="og:site_name" content="Google My Maps" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Magnificent Scoopers Service Area – Google My Maps" />
+    <meta name="twitter:description" content="this is a demo!" />
+    <meta name="twitter:image:src" content="https://www.google.com/maps/d/thumbnail?mid=1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp" />
+    <meta name="apple-itunes-app" content="app-id=585027354, app-argument=comgooglemaps://?mapsurl=https://www.google.com/mymaps/viewer?mid%3D1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp%26hl%3Den_GB">
+    <link rel="stylesheet" id="gmeviewer-styles" href="https://www.gstatic.com/mapspro/_/ss/k=mapspro.gmeviewer.HJQY7KxBWH0.L.W.O/am=AAAB/d=0/rs=ABjfnFX4YRUgGPjK1qJAc5sR9SCFESS75g" nonce="Y_HqSCP2LYqvvxYzLUwUgA">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" nonce="Y_HqSCP2LYqvvxYzLUwUgA">
+    <link rel="shortcut icon" href="//www.gstatic.com/mapspro/images/favicon-001.ico">
+    <link rel="canonical" href="https://www.google.com/mymaps/viewer?mid=1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp&amp;hl=en_GB">
+</head>
+
+<body jscontroller="O1VPAb" jsaction="click:cOuCgd;">
+    <div class="c4YZDc HzV7m-b7CEbf SfQLQb-dIxMhd-bN97Pc-b3rLgd">
+        <div class="jQhVs-haAclf">
+            <div class="jQhVs-uMX1Ee-My5Dr-purZT-uDEFge">
+                <div class="jQhVs-uMX1Ee-My5Dr-purZT-uDEFge-bN97Pc">
+                    <div class="jQhVs-uMX1Ee-My5Dr-purZT-uDEFge-Bz112c"></div>
+                    <div class="jQhVs-uMX1Ee-My5Dr-purZT-uDEFge-fmcmS-haAclf">
+                        <div class="jQhVs-uMX1Ee-My5Dr-purZT-uDEFge-fmcmS">Open full screen to view more</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="i4ewOd-haAclf">
+            <div class="i4ewOd-UzWXSb" id="map-canvas"></div>
+        </div>
+        <div class="X3SwIb-haAclf NBDE7b-oxvKad">
+            <div class="X3SwIb-i8xkGf"></div>
+        </div>
+        <div class="Te60Vd-ZMv3u dIxMhd-bN97Pc-b3rLgd">
+            <div class="dIxMhd-bN97Pc-Tswv1b-Bz112c"></div>
+            <div class="dIxMhd-bN97Pc-b3rLgd-fmcmS">This map was created by a user. <a href="//support.google.com/mymaps/answer/3024454?hl=en&amp;amp;ref_topic=3188329" target="_blank">Learn how to create your own.</a></div>
+            <div class="dIxMhd-bN97Pc-b3rLgd-TvD9Pc" title="Close"></div>
+        </div>
+        <script nonce="xtzjNNvyotmx6iaVECRHnQ">
+            function _DumpException(e) {
+                if (window.console) {
+                    window.console.error(e.stack);
+                }
+            }
+            var _pageData = "[[3,null,null,null,null,null,null,null,null,null,\"at\",\"AAX3J7AUopLz-fGYBU7vDpsl-p0GXgxGYw:1750840280943\",\"16152605994584779646\",1750840280944,\"0\",\"en_GB\",false,[null,null,\"goyalharshal42@gmail.com\",\"https://lh3.googleusercontent.com/a/ACg8ocIGyUA0N4E3ZqpnO8yLkQko6ZtQZ_e2MEN0WuSfyKCVXa7NgVo\\u003ds32\",\"https://plus.google.com/113566680426828664455/about\",\"Harshal Goyal\",\"https://lh3.googleusercontent.com/a/ACg8ocIGyUA0N4E3ZqpnO8yLkQko6ZtQZ_e2MEN0WuSfyKCVXa7NgVo\\u003ds64\",\"https://lh3.googleusercontent.com/c5dqxl-2uHZ82ah9p7yxrVF1ZssrJNSV_15Nu0TUZwzCWqmtoLxCUJgEzLGtxsrJ6-v6R6rKU_-FYm881TTiMCJ_\\u003ds1600\"],\"https://www.google.com/maps/d/viewer?mid\\u003d1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp\",\"https://www.google.com/maps/d/embed?mid\\u003d1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp\\u0026ehbc\\u003d2E312F\",\"https://www.google.com/maps/d/edit?mid\\u003d1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp\",\"https://www.google.com/maps/d/thumbnail?mid\\u003d1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp\",null,null,true,\"https://www.google.com/maps/d/print?mid\\u003d1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp\",\"https://www.google.com/maps/d/pdf?mid\\u003d1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp\",\"https://www.google.com/maps/d/viewer?mid\\u003d1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp\",null,false,\"/maps/d\",\"maps/sharing\",\"//www.google.com/intl/en_GB/help/terms_maps.html\",true,\"https://docs.google.com/picker\",null,false,null,[[[\"//www.gstatic.com/mapspro/images/google-my-maps-logo-regular-001.png\",143,25],[\"//www.gstatic.com/mapspro/images/google-my-maps-logo-regular-2x-001.png\",286,50]],[[\"//www.gstatic.com/mapspro/images/google-my-maps-logo-small-001.png\",113,20],[\"//www.gstatic.com/mapspro/images/google-my-maps-logo-small-2x-001.png\",226,40]]],1,\"https://www.gstatic.com/mapspro/_/js/k\\u003dmapspro.gmeviewer.en_GB.WxPM5kpXVoM.O/am\\u003dAAAB/d\\u003d0/rs\\u003dABjfnFX_4_JUfN-zSz9TZb8Ws3r_njzEQQ/m\\u003dgmeviewer_base\",null,null,true,null,\"IN\",null,null,null,null,null,null,true],[\"mf.map\",\"1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp\",\"Magnificent Scoopers Service Area\",null,[-95.7789454,30.0926227,-94.88632730000002,29.328090500000002],[-95.7789454,30.0926227,-94.88632730000002,29.328090500000002],[[null,\"-Q1WyekCngw\",\"Houston Service Area\",\"\",[[[\"https://mt.googleapis.com/vt/icon/name\\u003dicons/onion/1492-wht-polygon-blank.png\\u0026filter\\u003dff8E7268\"],null,1,1,[[[-95.7789454,30.0926227,-94.88632730000002,29.328090500000002]],\"0\",null,\"-Q1WyekCngw\",[29.744675975552042,-95.40462971428495],[0,0],\"2FFF4502191061C2\"],[[\"Houston Service Area\"]]]],null,null,true,null,null,null,null,[[\"-Q1WyekCngw\",1,null,null,null,\"https://www.google.com/maps/d/kml?mid\\u003d1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp\\u0026resourcekey\\u0026lid\\u003d-Q1WyekCngw\",null,null,null,null,null,2,null,[[[\"2FFF4502191061C2\",null,null,[[[[[[[30.0878699,-95.4177784]],[[30.0866817,-95.4424971]],[[30.0926227,-95.5084134]],[[30.0736102,-95.5454914]],[[30.0747986,-95.559224]],[[30.0498395,-95.5866891]],[[30.0498395,-95.686937]],[[30.0522168,-95.7432406]],[[30.0213071,-95.7679592]],[[29.9320905,-95.7679592]],[[29.8749498,-95.761093]],[[29.8427938,-95.761093]],[[29.8034779,-95.7761989]],[[29.7605702,-95.7789454]],[[29.7128734,-95.7761989]],[[29.6866306,-95.7720791]],[[29.6639607,-95.744614]],[[29.6568008,-95.718522]],[[29.6221871,-95.6965499]],[[29.5983087,-95.6828174]],[[29.6126365,-95.6484859]],[[29.572036,-95.5702101]],[[29.5409775,-95.5454915]],[[29.505129,-95.4644692]],[[29.5111046,-95.3861935]],[[29.5254447,-95.3861935]],[[29.5290294,-95.2708398]],[[29.5122997,-95.2021768]],[[29.4848092,-95.1637256]],[[29.47405,-95.1513663]],[[29.4824183,-95.107422]],[[29.3819524,-95.0222799]],[[29.3460477,-94.9769624]],[[29.3280905,-94.9288983]],[[29.3687889,-94.8863273]],[[29.4154522,-94.8890739]],[[29.4130596,-94.9494973]],[[29.47405,-94.9687229]],[[29.4776365,-94.9137925]],[[29.4931766,-94.9206589]],[[29.5170799,-94.9975614]],[[29.5481457,-95.0209067]],[[29.6293496,-95.0305195]],[[29.6818584,-95.0332661]],[[29.7081025,-95.1060489]],[[29.710488,-95.1472466]],[[29.7629544,-95.1499931]],[[29.8273075,-95.176085]],[[29.8749498,-95.1925641]],[[29.9178084,-95.2021769]],[[29.9320905,-95.2145362]],[[29.9380407,-95.2928119]],[[29.9535199,-95.2875706]],[[29.9558996,-95.3795787]],[[30.0141829,-95.4029242]],[[30.039151,-95.4084172]],[[30.0534156,-95.4042974]]]]]]],0,[[\"name\",[\"Houston Service Area\"],1]],null,0]],[[[\"https://mt.googleapis.com/vt/icon/name\\u003dicons/onion/SHARED-mymaps-pin-container-bg_4x.png,icons/onion/SHARED-mymaps-pin-container_4x.png,icons/onion/1899-blank-shape_pin_4x.png\\u0026highlight\\u003dff000000,BCAAA4\\u0026scale\\u003d2.0\",[32,64]],[[\"BCAAA4\",1],1200],[[\"BCAAA4\",0.25098039215686274],[\"BCAAA4\",1],3901]]]]]],null,null,null,null,null,1]],[2],null,null,\"mapspro_in_drive\",\"1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp\",\"https://drive.google.com/u/0/abuse?id\\u003d1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp\",true,false,false,\"this is a demo!\",2,false,\"https://www.google.com/maps/d/kml?mid\\u003d1Of1sHZsyBqhyB5vntWfDBt-wu48ro5Jp\\u0026resourcekey\",107729,false,false,\"this is a demo!\",true,\"\",true,null,[null,null,[1588933726,88638000],[1588933726,174000000]],false,\"https://support.google.com/legal/troubleshooter/1114905#ts\\u003d9723198%2C1115689\"]]";
+        </script>
+        <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?v=3.60&client=google-maps-pro&language=en_GB&region=IN&libraries=places,visualization,geometry,search" nonce="xtzjNNvyotmx6iaVECRHnQ"></script>
+        <script id="base-js" src="https://www.gstatic.com/mapspro/_/js/k=mapspro.gmeviewer.en_GB.WxPM5kpXVoM.O/am=AAAB/d=0/rs=ABjfnFX_4_JUfN-zSz9TZb8Ws3r_njzEQQ/m=gmeviewer_base" nonce="xtzjNNvyotmx6iaVECRHnQ"></script>
+        <script nonce="xtzjNNvyotmx6iaVECRHnQ">
+            _startApp();
+        </script>
+    </div>
+</body>
+
+</html>
